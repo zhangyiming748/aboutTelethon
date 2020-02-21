@@ -1,6 +1,6 @@
 import persional
 import socks
-from telethon import TelegramClient
+from telethon import TelegramClient,sync
 
 
 def Connect():
@@ -14,6 +14,7 @@ def Connect():
     print("connecting...")
     client = TelegramClient('my_session', api_id=api_id, api_hash=api_hash, proxy=proxy).start()
     print("connected!")
+    print(client)
     return client
 
 
@@ -24,6 +25,6 @@ def disConnect(client):
 
 if __name__ == '__main__':
     Connect()
-    print("connected!")
-    disConnect(Connect())
-    print("disconnected!")
+    # print("connected!")
+    # disConnect(Connect())
+    # print("disconnected!")

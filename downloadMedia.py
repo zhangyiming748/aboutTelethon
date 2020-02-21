@@ -21,6 +21,19 @@ def getPicture(link):
     disConnect(client)
 
 
+def getPic(link):
+    client = Connect()
+    name = url2name(link=link)
+    path = root + name + '\\GIF'
+    pics=client.get_messages(link,None,filter=InputMessagesFilterPhotos)
+    index =0
+    for pic in pics:
+        index = index +1
+        filename = path + '\\' + str(pic.id) + '.jpg'
+        client.download_media(pic,filename)
+
+    disConnect(client)
+
 def getGif(link):
     client = Connect()
     name = url2name(link)
@@ -71,6 +84,6 @@ def getDoc(link):
 
 if __name__ == '__main__':
     # getPicture(link=channelList.zukong)
-    getGif(link="https://t.me/sizukon")
+    getPicture(link="https://t.me/sizukon")
     # getVideo(link=channelList.zukong)
     # getPicture(link=channelList.OnlyDeviant)

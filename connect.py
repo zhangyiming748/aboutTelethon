@@ -1,6 +1,8 @@
 import persional
-from sitePackage import socks
-from telethon import TelegramClient, sync
+import socks
+from telethon import TelegramClient
+
+
 def Connect():
     # my api_id
     api_id = persional.getId()
@@ -18,6 +20,8 @@ def Connect():
 def disConnect(client):
     client.disconnect()
     print("disConnect,Done")
+
+
 if __name__ == '__main__':
     Connect()
     print("connected!")

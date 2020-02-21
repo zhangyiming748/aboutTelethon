@@ -3,6 +3,8 @@ from url2name import *
 from rootPath import *
 from telethon.tl.types import *
 from printLog import *
+
+
 def getPicture(link):
     client = Connect()
     name = url2name(link)
@@ -68,8 +70,7 @@ def getDoc(link):
 
 
 if __name__ == '__main__':
-    #getPicture(link=channelList.zukong)
+    # getPicture(link=channelList.zukong)
     getGif(link="https://t.me/sizukon")
-    #getVideo(link=channelList.zukong)
-    #getPicture(link=channelList.OnlyDeviant)
-
+    # getVideo(link=channelList.zukong)
+    # getPicture(link=channelList.OnlyDeviant)

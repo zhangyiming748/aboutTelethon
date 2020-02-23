@@ -1,3 +1,12 @@
+# 下载多媒体文件代码
+'''
+过滤器
+InputMessagesFilterEmpty, InputMessagesFilterPhotos, InputMessagesFilterVideo, \
+    InputMessagesFilterPhotoVideo, InputMessagesFilterDocument, InputMessagesFilterUrl, InputMessagesFilterGif, \
+    InputMessagesFilterVoice, InputMessagesFilterMusic, InputMessagesFilterChatPhotos, InputMessagesFilterPhoneCalls, \
+    InputMessagesFilterRoundVoice, InputMessagesFilterRoundVideo, InputMessagesFilterMyMentions, \
+    InputMessagesFilterGeo, InputMessagesFilterContacts
+'''
 from connect import *
 from url2name import *
 from rootPath import *
@@ -6,33 +15,32 @@ from printLog import *
 
 
 def getPicture(link):
+    # 建立连接
     client = Connect()
+    # 获取频道名称
     name = url2name(link)
+    # 指定下载目录前缀
     path = root + name + '\\Picture'
+    # 获取信息 过滤器过滤图片
     photos = client.get_messages(link, None, filter=InputMessagesFilterPhotos)
     index = 0
+    # 遍历图片
     for photo in photos:
+        # 为log.md添加每行前缀
         index = index + 1
+        # 拼接文件名
         filename = path + '\\' + str(photo.id) + '.jpg'
+        # 调用写日志
         before(index)
+        # 调用写日志
         writeLog(photo.id, name)
+        # 下载文件核心代码
         client.download_media(photo, filename)
+        # 调用写日志
         after()
+    # 断开连接
     disConnect(client)
 
-
-def getPic(link):
-    client = Connect()
-    name = url2name(link=link)
-    path = root + name + '\\GIF'
-    pics=client.get_messages(link,None,filter=InputMessagesFilterPhotos)
-    index =0
-    for pic in pics:
-        index = index +1
-        filename = path + '\\' + str(pic.id) + '.jpg'
-        client.download_media(pic,filename)
-
-    disConnect(client)
 
 def getGif(link):
     client = Connect()

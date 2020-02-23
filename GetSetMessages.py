@@ -1,3 +1,4 @@
+# 发送和接收消息功能代码
 import connect
 from telethon.tl.functions.messages import GetHistoryRequest
 from telethon import TelegramClient, sync
@@ -5,19 +6,13 @@ from telethon import *
 import persional
 import socks
 
-# def send(link, message):
-#     client = connect.Connect()
-#     print(link)
-#     entity = client.get_entity(link)
-#     print("2")
-#     client.send_message(entity=entity, message=message)
-#     print("3")
-#     connect.disConnect(client)
-def send(link,msg):
+
+def send(link, msg):
     client = connect.Connect()
-    entity=client.get_entity(link)
-    client.send_message(entity,msg)
+    entity = client.get_entity(link)
+    client.send_message(entity, msg)
     connect.disConnect(client)
+
 
 def receive(link, limit):
     client = connect.Connect()
@@ -42,5 +37,5 @@ def receive(link, limit):
 
 if __name__ == '__main__':
     url = "https://t.me/testAnything"
-    text = "之前实现的所有功能都要重写一遍了"
-    send(link=url,msg=text)
+    text = "早上好"
+    send(link=url, msg=text)

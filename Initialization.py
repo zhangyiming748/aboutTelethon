@@ -1,3 +1,4 @@
+# 原始功能代码防止意外
 from telethon import TelegramClient, sync
 import pathlib
 from datetime import datetime
@@ -9,6 +10,8 @@ from telethon.tl.types import InputMessagesFilterEmpty, InputMessagesFilterPhoto
     InputMessagesFilterVoice, InputMessagesFilterMusic, InputMessagesFilterChatPhotos, InputMessagesFilterPhoneCalls, \
     InputMessagesFilterRoundVoice, InputMessagesFilterRoundVideo, InputMessagesFilterMyMentions, \
     InputMessagesFilterGeo, InputMessagesFilterContacts
+
+
 def function():
     api_id = 1062870
     api_hash = '52be17f4c38ba6e92a9236ccf2e38c49'
@@ -22,5 +25,7 @@ def function():
     client.send_message(entity=entity, message=text)
     print("3")
     client.disconnect()
+
+
 if __name__ == '__main__':
     function()

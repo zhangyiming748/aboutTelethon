@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2b5b3b39-8417-4626-a849-31de18447018" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginDaozhang.py" beforeDir="false" afterPath="$PROJECT_DIR$/loginDaozhang.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_session.session" beforeDir="false" afterPath="$PROJECT_DIR$/my_session.session" afterDir="false" />
-    </list>
+    <list default="true" id="2b5b3b39-8417-4626-a849-31de18447018" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -368,7 +364,7 @@
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.65245205" weight="0.33370787" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32925472" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1693605" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17146873" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" weight="0.6772429" />
       <window_info anchor="right" id="SciView" order="3" />

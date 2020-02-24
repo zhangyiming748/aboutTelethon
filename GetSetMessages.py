@@ -38,4 +38,6 @@ def receive(link, limit):
 if __name__ == '__main__':
     url = "https://t.me/testAnything"
     text = "早上好"
-    send(link=url, msg=text)
+    long = '''不知道这个好不好使 完整代码已经发给你们了
+    使用时注意别侵权'''
+    send(link=url, msg=long)

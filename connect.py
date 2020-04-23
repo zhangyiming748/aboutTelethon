@@ -27,7 +27,7 @@ def Connect():
 def disConnect(client):
     # 断开已经建立的连接
     client.disconnect()
-    print("xxdisConnect,Done")
+    print("disConnect,Done")
 
 
 if __name__ == '__main__':

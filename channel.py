@@ -4,7 +4,7 @@ daozhangCheckin = "https://t.me/daozhangqiandaoqun"
 futa3GIF = "https://t.me/futanarimastergif"
 # 二次元扶她(GIF)
 futa2GIF = "https://t.me/futamastergif2d"
-# 三次元扶她(Video)
+# 三次元扶她(Video)f
 futa3Video = "https://t.me/futanarimasterVd"
 # 二次元扶她(PIC)
 futa2Pic = "https://t.me/futanarimaster"

@@ -12,4 +12,4 @@ def getHash():
 
 
 if __name__ == '__main__':
-    pass
+    print('id = ',getId(),'\thash = ',getHash())

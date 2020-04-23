@@ -8,6 +8,8 @@ import typing
 import inspect
 from io import BytesIO
 
+from ..crypto import AES
+
 from .. import utils, helpers, hints
 from ..tl import types, functions, custom
 
@@ -261,6 +263,13 @@ class UploadMethods:
                     '/my/photos/holiday2.jpg',
                     '/my/drawings/portrait.png'
                 ])
+
+                # Printing upload progress
+                def callback(current, total):
+                    print('Uploaded', current, 'out of', total,
+                          'bytes: {:.2%}'.format(current / total))
+
+                await client.send_file(chat, file, progress_callback=callback)
         """
         # TODO Properly implement allow_cache to reuse the sha256 of the file
         # i.e. `None` was used
@@ -348,10 +357,7 @@ class UploadMethods:
             entities=msg_entities, reply_markup=markup, silent=silent,
             schedule_date=schedule, clear_draft=clear_draft
         )
-        msg = self._get_response_message(request, await self(request), entity)
-        await self._cache_media(msg, file, file_handle, image=image)
-
-        return msg
+        return self._get_response_message(request, await self(request), entity)
 
     async def _send_album(self: 'TelegramClient', entity, files, caption='',
                           progress_callback=None, reply_to=None,
@@ -390,16 +396,12 @@ class UploadMethods:
                 r = await self(functions.messages.UploadMediaRequest(
                     entity, media=fm
                 ))
-                self.session.cache_file(
-                    fh.md5, fh.size, utils.get_input_photo(r.photo))
 
                 fm = utils.get_input_media(r.photo)
             elif isinstance(fm, types.InputMediaUploadedDocument):
                 r = await self(functions.messages.UploadMediaRequest(
                     entity, media=fm
                 ))
-                self.session.cache_file(
-                    fh.md5, fh.size, utils.get_input_document(r.document))
 
                 fm = utils.get_input_media(
                     r.document, supports_streaming=supports_streaming)
@@ -432,9 +434,15 @@ class UploadMethods:
             part_size_kb: float = None,
             file_name: str = None,
             use_cache: type = None,
+            key: bytes = None,
+            iv: bytes = None,
             progress_callback: 'hints.ProgressCallback' = None) -> 'types.TypeInputFile':
         """
         Uploads a file to Telegram's servers, without sending it.
+
+        .. note::
+
+            Generally, you want to use `send_file` instead.
 
         This method returns a handle (an instance of :tl:`InputFile` or
         :tl:`InputFileBig`, as required) which can be later used before
@@ -464,6 +472,12 @@ class UploadMethods:
                 This parameter currently does nothing, but is kept for
                 backward-compatibility (and it may get its use back in
                 the future).
+
+            key ('bytes', optional):
+                In case of an encrypted upload (secret chats) a key is supplied
+
+            iv ('bytes', optional):
+                In case of an encrypted upload (secret chats) an iv is supplied
 
             progress_callback (`callable`, optional):
                 A callback function accepting two parameters:
@@ -575,6 +589,10 @@ class UploadMethods:
                 # Read the file by in chunks of size part_size
                 part = stream.read(part_size)
 
+                # encryption part if needed
+                if key and iv:
+                    part = AES.encrypt_ige(part, key, iv)
+
                 # The SavePartRequest is different depending on whether
                 # the file is too large or not (over or less than 10MB)
                 if is_large:
@@ -621,7 +639,8 @@ class UploadMethods:
 
         # `aiofiles` do not base `io.IOBase` but do have `read`, so we
         # just check for the read attribute to see if it's file-like.
-        if not isinstance(file, (str, bytes)) and not hasattr(file, 'read'):
+        if not isinstance(file, (str, bytes, types.InputFile, types.InputFileBig))\
+                and not hasattr(file, 'read'):
             # The user may pass a Message containing media (or the media,
             # or anything similar) that should be treated as a file. Try
             # getting the input media for whatever they passed and send it.
@@ -644,7 +663,10 @@ class UploadMethods:
 
         media = None
         file_handle = None
-        if not isinstance(file, str) or os.path.isfile(file):
+
+        if isinstance(file, (types.InputFile, types.InputFileBig)):
+            file_handle = file
+        elif not isinstance(file, str) or os.path.isfile(file):
             file_handle = await self.upload_file(
                 _resize_photo_if_needed(file, as_image),
                 progress_callback=progress_callback
@@ -681,30 +703,19 @@ class UploadMethods:
                 supports_streaming=supports_streaming
             )
 
-            input_kw = {}
-            if thumb:
+            if not thumb:
+                thumb = None
+            else:
                 if isinstance(thumb, pathlib.Path):
                     thumb = str(thumb.absolute())
-                input_kw['thumb'] = await self.upload_file(thumb)
+                thumb = await self.upload_file(thumb)
 
             media = types.InputMediaUploadedDocument(
                 file=file_handle,
                 mime_type=mime_type,
                 attributes=attributes,
-                **input_kw
+                thumb=thumb
             )
         return file_handle, media, as_image
-
-    async def _cache_media(self: 'TelegramClient', msg, file, file_handle, image):
-        if file and msg and isinstance(file_handle,
-                                       custom.InputSizedFile):
-            # There was a response message and we didn't use cached
-            # version, so cache whatever we just sent to the database.
-            md5, size = file_handle.md5, file_handle.size
-            if image:
-                to_cache = utils.get_input_photo(msg.media.photo)
-            else:
-                to_cache = utils.get_input_document(msg.media.document)
-            self.session.cache_file(md5, size, to_cache)
 
     # endregion

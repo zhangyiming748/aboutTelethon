@@ -1,0 +1,49 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_2020_4_23,_1_07_下午_[Default]1" date="1587618438837" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_4_23,_1_07_下午_[Default]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 2020/4/23, 1:07 下午 [Default]" />
+  <binary>
+    <option name="BEFORE_PATH" value="venv/Lib/site-packages/dns/py.typed" />
+    <option name="AFTER_PATH" value="venv/bin/pyrsa-priv2pub" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_4_23,_1_07_下午_[Default]1/pyrsa-priv2pub" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="venv/bin/python3" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_4_23,_1_07_下午_[Default]1/python3" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="my_session.session" />
+    <option name="AFTER_PATH" value="my_session.session" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_4_23,_1_07_下午_[Default]1/my_session.session" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="venv/Lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/distlib/w32.exe" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_4_23,_1_07_下午_[Default]1/w32.exe" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="venv/Lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/distlib/t32.exe" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_4_23,_1_07_下午_[Default]1/t32.exe" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="venv/Lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/distlib/w64.exe" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_4_23,_1_07_下午_[Default]1/w64.exe" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="venv/Lib/python3.7/site-packages/setuptools-28.8.0-py3.7.egg" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_4_23,_1_07_下午_[Default]1/setuptools-28.8.0-py3.7.egg" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="venv/bin/python" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_4_23,_1_07_下午_[Default]1/python" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="venv/Lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/distlib/t64.exe" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_4_23,_1_07_下午_[Default]1/t64.exe" />
+  </binary>
+</changelist>

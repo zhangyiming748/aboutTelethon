@@ -1,0 +1,109 @@
+<changelist name="Uncommitted_changes_before_Update_at_2020_4_23,_1_05_下午_[Default]1" date="1587618385094" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_4_23,_1_05_下午_[Default]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2020/4/23, 1:05 下午 [Default]" />
+  <binary>
+    <option name="BEFORE_PATH" value="venv/Lib/site-packages/Telethon-1.11.0.dist-info/WHEEL" />
+    <option name="AFTER_PATH" value="venv/lib/python3.7/site-packages/Telethon-1.11.0.dist-info/WHEEL" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_4_23,_1_05_下午_[Default]1/WHEEL" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="venv/Lib/site-packages/Telethon-1.11.0.dist-info/INSTALLER" />
+    <option name="AFTER_PATH" value="venv/lib/python3.7/site-packages/Telethon-1.11.0.dist-info/INSTALLER" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_4_23,_1_05_下午_[Default]1/INSTALLER" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="venv/Lib/site-packages/rsa-4.0.dist-info/WHEEL" />
+    <option name="AFTER_PATH" value="venv/lib/python3.7/site-packages/rsa-4.0.dist-info/WHEEL" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_4_23,_1_05_下午_[Default]1/WHEEL" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="venv/Lib/site-packages/rsa-4.0.dist-info/METADATA" />
+    <option name="AFTER_PATH" value="venv/lib/python3.7/site-packages/rsa-4.0.dist-info/METADATA" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_4_23,_1_05_下午_[Default]1/METADATA" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="venv.zip" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_4_23,_1_05_下午_[Default]1/venv.zip" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="venv/Lib/site-packages/Telethon-1.11.0.dist-info/LICENSE" />
+    <option name="AFTER_PATH" value="venv/lib/python3.7/site-packages/Telethon-1.11.0.dist-info/LICENSE" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_4_23,_1_05_下午_[Default]1/LICENSE" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="venv/bin/python3" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_4_23,_1_05_下午_[Default]1/python3" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="my_session.session" />
+    <option name="AFTER_PATH" value="my_session.session" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_4_23,_1_05_下午_[Default]1/my_session.session" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="venv/Lib/site-packages/eventlet-0.25.1.dist-info/INSTALLER" />
+    <option name="AFTER_PATH" value="venv/lib/python3.7/site-packages/rsa-4.0.dist-info/INSTALLER" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_4_23,_1_05_下午_[Default]1/INSTALLER" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="venv/Lib/site-packages/eventlet-0.25.1.dist-info/WHEEL" />
+    <option name="AFTER_PATH" value="venv/lib/python3.7/site-packages/pyasn1-0.4.8.dist-info/WHEEL" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_4_23,_1_05_下午_[Default]1/WHEEL" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="venv/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/distlib/w32.exe" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_4_23,_1_05_下午_[Default]1/w32.exe" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="venv/Lib/site-packages/pyasn1-0.4.8.dist-info/METADATA" />
+    <option name="AFTER_PATH" value="venv/lib/python3.7/site-packages/pyasn1-0.4.8.dist-info/METADATA" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_4_23,_1_05_下午_[Default]1/METADATA" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="venv/Lib/site-packages/Telethon-1.11.0.dist-info/METADATA" />
+    <option name="AFTER_PATH" value="venv/lib/python3.7/site-packages/Telethon-1.11.0.dist-info/METADATA" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_4_23,_1_05_下午_[Default]1/METADATA" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="venv/Lib/site-packages/dnspython-1.16.0.dist-info/INSTALLER" />
+    <option name="AFTER_PATH" value="venv/lib/python3.7/site-packages/pyasn1-0.4.8.dist-info/INSTALLER" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_4_23,_1_05_下午_[Default]1/INSTALLER" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="venv/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/distlib/t32.exe" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_4_23,_1_05_下午_[Default]1/t32.exe" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="venv/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/distlib/w64.exe" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_4_23,_1_05_下午_[Default]1/w64.exe" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="venv/lib/python3.7/site-packages/setuptools-28.8.0-py3.7.egg" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_4_23,_1_05_下午_[Default]1/setuptools-28.8.0-py3.7.egg" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="venv/bin/python" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_4_23,_1_05_下午_[Default]1/python" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="venv/Lib/site-packages/pyasn1-0.4.8.dist-info/zip-safe" />
+    <option name="AFTER_PATH" value="venv/lib/python3.7/site-packages/pyasn1-0.4.8.dist-info/zip-safe" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_4_23,_1_05_下午_[Default]1/zip-safe" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="venv/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/distlib/t64.exe" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_4_23,_1_05_下午_[Default]1/t64.exe" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="venv/bin/python3.7" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_4_23,_1_05_下午_[Default]1/python3.7" />
+  </binary>
+</changelist>

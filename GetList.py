@@ -12,11 +12,12 @@ def getList(client):
     responses = client.iter_dialogs(10000)
     if responses is not None:
         for response in responses:
-            if isinstance(response.entity ,tuple([Channel, Chat])):
+            # if isinstance(response.entity,tuple([])):
+            if isinstance(response.entity, tuple([Channel, Chat])):
                 print(response.entity)
                 res = response.entity
                 print(res.id)
-                saveFile("text.txt",str(response))
+                saveFile("text.txt", str(res.id))
 
 
 if __name__ == '__main__':

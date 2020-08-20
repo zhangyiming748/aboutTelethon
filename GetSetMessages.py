@@ -1,6 +1,6 @@
 # 发送和接收消息功能代码
 import connect
-from telethon.tl.functions.messages import GetHistoryRequest
+from telethon.tl.functions.messages import GetHistoryRequest, GetStickerSetRequest
 
 
 def send(link, msg):
@@ -29,8 +29,14 @@ def receive(link, limit):
             # f.write("\n")
             index += 1
     connect.disConnect(client)
+def GetSticker(link,limit):
+    client = connect.Connect()
+    entity = client.get_entity(link)
+    posts = client(
+        GetStickerSetRequest(
 
-
+        )
+    )
 if __name__ == '__main__':
     url = "https://t.me/testAnything"
     text = "早上好"

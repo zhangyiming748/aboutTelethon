@@ -10,7 +10,7 @@ def Connect():
     # 机器人Hash
     api_hash = p.getHash()
     # 需要代理用这个
-    proxy = (socks.SOCKS5, '127.0.0.1', 1086)
+    proxy = (socks.SOCKS5, '127.0.0.1', 1089)
     #proxy = (socks.PROXY_TYPE_HTTP, '127.0.0.1', 12321)
     # my proxy
     # proxy = (base.socks.HTTP, '127.0.0.1', 12333)

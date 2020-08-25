@@ -13,7 +13,7 @@ logging.basicConfig(level=logging.INFO)
 # client = TelegramClient("user", 6, "eb06d4abfb49dc3eeb1aeb98ae0f581e").start()
 client = connect.Connect()
 
-
+target=''
 def find_instance(items, class_or_tuple):
     for item in items:
         if isinstance(item, class_or_tuple):
@@ -47,6 +47,7 @@ async def on_sticker(event):
 
     async def download(sticker, emojis, path, file):
         prefix ='/Users/zen/Pictures/Sticker/'
+        target=prefix
         await client.download_media(sticker, file=os.path.join(prefix,path, file))
         #await client.download_media(sticker, file='./')
 
@@ -76,5 +77,5 @@ async def on_sticker(event):
     await asyncio.sleep(3)
     await status_msg.delete()
 
-print('Send stickers to yourself to download sticker packs')
+print('Send stickers to yourself to download sticker packs\t'+'save to' + target)
 client.run_until_disconnected()

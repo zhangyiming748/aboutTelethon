@@ -2,5 +2,20 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pi/go/src/gitee.com/baiduocr" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pi/go/src/go.etcd.io/bbolt" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pi/go/src/golang.org/x/crypto" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pi/go/src/golang.org/x/mod" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pi/go/src/golang.org/x/net" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pi/go/src/golang.org/x/sys" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pi/go/src/golang.org/x/text" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pi/go/src/golang.org/x/tools" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pi/go/src/golang.org/x/xerrors" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pi/go/src/google.golang.org/genproto" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pi/go/src/google.golang.org/grpc" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pi/go/src/google.golang.org/snappy" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pi/go/src/gopkg.in/go-playground/assert.v1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pi/go/src/gopkg.in/go-playground/validator.v9" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pi/go/src/gopkg.in/yaml.v2" vcs="Git" />
   </component>
 </project>

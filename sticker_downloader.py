@@ -1,3 +1,5 @@
+# pip3 install telethon
+# pip3 install PySocks
 import asyncio
 import logging
 import os

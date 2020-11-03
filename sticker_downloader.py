@@ -28,7 +28,7 @@ async def on_sticker(event):
     sticker = event.message.sticker
     sticker_attrib = find_instance(sticker.attributes, DocumentAttributeSticker)
     if not sticker_attrib.stickerset:
-        await event.reply('That sticker is not part of a pack')
+        await event.raeply('That sticker is not part of a pack')
         return
 
     sticker_set = await client(GetStickerSetRequest(sticker_attrib.stickerset))

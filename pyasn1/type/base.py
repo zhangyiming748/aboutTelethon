@@ -4,6 +4,23 @@
 # Copyright (c) 2005-2019, Ilya Etingof <etingof@gmail.com>
 # License: http://snmplabs.com/pyasn1/license.html
 #
+
+'''
+这个模块定义了ASN.1类型系统的基础类。
+
+主要包含以下核心类：
+1. Asn1Item - ASN.1对象的基类
+2. Asn1Type - ASN.1类型的基类，提供标签和约束支持
+3. SimpleAsn1Type - ASN.1简单类型的基类（如整数、字符串等）
+4. ConstructedAsn1Type - ASN.1构造类型的基类（如序列、集合等）
+
+这些基类提供了ASN.1类型系统的基础功能：
+- 类型标签（Tag）管理
+- 值约束（Constraint）检查
+- 类型比较和继承关系判断
+- 值的序列化和反序列化
+'''
+
 import sys
 
 from pyasn1 import error
@@ -17,8 +34,29 @@ __all__ = ['Asn1Item', 'Asn1Type', 'SimpleAsn1Type',
 
 
 class Asn1Item(object):
+    '''
+    ASN.1对象的基类，为所有ASN.1类型提供基础功能。
+    
+    主要特性：
+    1. 提供类型ID生成机制，用于唯一标识ASN.1类型
+    2. 作为所有ASN.1类型类的基类，确保类型系统的一致性
+    '''
+    
     @classmethod
     def getTypeId(cls, increment=1):
+        '''
+        生成并返回唯一的类型ID
+        
+        参数：
+            increment (int): ID增量值，默认为1
+            
+        返回：
+            int: 唯一的类型ID
+            
+        说明：
+            使用计数器机制确保每个类型获得唯一的ID
+            第一次调用时初始化计数器
+        '''
         try:
             Asn1Item._typeCounter += increment
         except AttributeError:
@@ -27,25 +65,28 @@ class Asn1Item(object):
 
 
 class Asn1Type(Asn1Item):
-    """Base class for all classes representing ASN.1 types.
-
-    In the user code, |ASN.1| class is normally used only for telling
-    ASN.1 objects from others.
-
-    Note
-    ----
-    For as long as ASN.1 is concerned, a way to compare ASN.1 types
-    is to use :meth:`isSameTypeWith` and :meth:`isSuperTypeOf` methods.
-    """
-    #: Set or return a :py:class:`~pyasn1.type.tag.TagSet` object representing
-    #: ASN.1 tag(s) associated with |ASN.1| type.
+    '''
+    ASN.1类型的基类，为所有具体的ASN.1类型提供基础功能。
+    
+    主要特性：
+    1. 标签（Tag）管理：通过tagSet属性管理类型的ASN.1标签
+    2. 约束（Constraint）管理：通过subtypeSpec属性管理值的约束条件
+    3. 类型比较：提供isSameTypeWith和isSuperTypeOf方法用于类型比较
+    4. 只读属性保护：防止关键属性被意外修改
+    
+    使用说明：
+    - 在用户代码中，主要用于区分ASN.1对象和其他Python对象
+    - 进行类型比较时，应使用isSameTypeWith和isSuperTypeOf方法
+    - 不要直接实例化这个类，应使用其具体子类
+    '''
+    
+    #: ASN.1标签集合，使用TagSet对象表示与此类型关联的ASN.1标签
     tagSet = tag.TagSet()
 
-    #: Default :py:class:`~pyasn1.type.constraint.ConstraintsIntersection`
-    #: object imposing constraints on initialization values.
+    #: 值约束条件，使用ConstraintsIntersection对象定义对初始化值的约束
     subtypeSpec = constraint.ConstraintsIntersection()
 
-    # Disambiguation ASN.1 types identification
+    #: 用于区分不同ASN.1类型的唯一标识符
     typeId = None
 
     def __init__(self, **kwargs):
